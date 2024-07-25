@@ -27,13 +27,13 @@ export default function Header() {
       </Link>
       <nav>
         <ul className='flex gap-x-5 text-[14px]'>
-          {navLinks.map(link => (
+          {navLinks.map((link) => (
             <li key={link.href}>
               <Link
                 href={link.href}
-                className={`${
-                  pathname === link.href ? 'text-zinc-900' : 'text-zinc-400'
-                }`}>
+                className={`${pathname === link.href ? 'text-zinc-900' : 'text-zinc-400'
+                  }`}
+              >
                 {link.label}
               </Link>
             </li>
@@ -43,3 +43,7 @@ export default function Header() {
     </header>
   );
 }
+
+
+
+
