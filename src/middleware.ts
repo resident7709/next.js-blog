@@ -1,4 +1,4 @@
-// ?? взаимодействие с Kinde_Auth
+// * src/middleware.ts
 import { NextRequest } from 'next/server';
 import { withAuth } from '@kinde-oss/kinde-auth-nextjs/middleware';
 

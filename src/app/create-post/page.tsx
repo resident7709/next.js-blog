@@ -1,15 +1,15 @@
-import { redirect } from 'next/navigation';
-import { getKindeServerSession } from '@kinde-oss/kinde-auth-nextjs/server';
+// import { redirect } from 'next/navigation';
+// import { getKindeServerSession } from '@kinde-oss/kinde-auth-nextjs/server';
 
 import { createPost } from '@/actions/actions';
 import { LogoutLink } from '@kinde-oss/kinde-auth-nextjs/components';
 
 export default async function CreatePost() {
-  const { isAuthenticated } = getKindeServerSession();
+  // const { isAuthenticated } = getKindeServerSession();
 
-  if (!(await isAuthenticated())) {
-    redirect('/api/auth/login?post_login_redirect_url=/create-post');
-  }
+  // if (!(await isAuthenticated())) {
+  //   redirect('/api/auth/login?post_login_redirect_url=/create-post');
+  // }
 
   return (
     <main className='text-center pt-16'>
