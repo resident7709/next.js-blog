@@ -13,8 +13,6 @@ const navLinks = [
 export default function Header() {
   const pathname = usePathname();
 
-  console.log(pathname);
-
   return (
     <header className='flex justify-between items-center py-4 px-3 border-b'>
       <Link href='/'>
@@ -28,12 +26,13 @@ export default function Header() {
       </Link>
       <nav>
         <ul className='flex gap-x-5 text-[14px]'>
-          {navLinks.map((link) => (
+          {navLinks.map(link => (
             <li key={link.href}>
               <Link
                 href={link.href}
-                className={`${pathname === link.href ? 'text-zinc-900' : 'text-zinc-400'
-                  }`}
+                className={`${
+                  pathname === link.href ? 'text-zinc-900' : 'text-zinc-400'
+                }`}
               >
                 {link.label}
               </Link>
@@ -44,7 +43,3 @@ export default function Header() {
     </header>
   );
 }
-
-
-
-
